@@ -14,7 +14,7 @@ export default function App() {
       {currentPage === "home" && <Home isDark={isDark} />}
       {currentPage === "laptops" && <Laptops />}
       {currentPage === "parts" && <Parts />}
-      {currentPage === "periphery" && <Periphery />}
+      {currentPage === "periphery" && <Periphery isDark={isDark} />}
     </Layout>
   );
 }

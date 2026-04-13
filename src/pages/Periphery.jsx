@@ -1,12 +1,29 @@
-export default function Periphery() {
+import { PRODUCTS } from "../data/PeripheryData";
+import PageHeader from "../components/PageHeader";
+import ProductGrid from "../components/ProductGrid";
+
+export default function PeripheryPage({ isDark = true }) {
   return (
-    <div className='flex flex-col items-center pt-24'>
-      <h1 className='text-8xl font-black uppercase tracking-[1px]'>Периферия</h1>
-      <p className='mt-4 text-gray-500 uppercase tracking-widest text-[10px]'>
-        Побрекушки и всякая всячина
-      </p>
-      <div className='mt-10 p-10 border border-dashed border-gray-500 rounded-3xl opacity-30'>
-        Здесь скоро будут карточки периферии...
+    <div
+      className={`min-h-screen font-sans relative overflow-x-hidden transition-colors duration-300
+      ${isDark ? "bg-[#0a0a0a]" : "bg-white"}`}
+    >
+      {/* фоновый glow */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div
+          className={`absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[400px] rounded-full blur-[120px]
+          ${isDark ? "bg-violet-600/10" : "bg-violet-300/20"}`}
+        />
+      </div>
+
+      <div className="relative z-10 max-w-6xl mx-auto px-6 py-12">
+        <PageHeader
+          title="ПЕРИФЕРИЯ"
+          subtitle="Побрекушки и всякая всячина"
+          isDark={isDark}
+        />
+
+        <ProductGrid products={PRODUCTS} isDark={isDark} />
       </div>
     </div>
   );
