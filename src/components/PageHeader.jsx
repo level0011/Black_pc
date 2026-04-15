@@ -1,15 +1,20 @@
 export default function PageHeader({ title, subtitle, isDark }) {
   return (
-    <div className="text-center mb-12">
-      <h1 className={`text-6xl md:text-7xl font-black tracking-tighter mb-3
-        ${isDark ? "text-white" : "text-black"}`}>
-        {title}
+    <div className='flex flex-col items-center my-20 text-center'>
+      {/* Основной заголовок h1 */}
+      <h1
+        className={`text-7xl md:text-8xl font-black uppercase tracking-[5px] transition-colors duration-300 ${
+          isDark ? "text-white" : "text-black"
+        }`}
+      >
+        {/* С помощью split и map можно выделить первое слово цветом, как в твоем дизайне */}
+        {title.split(" ")[0]}{" "}
+        <span className='text-[#8860ff]'>{title.split(" ").slice(1).join(" ")}</span>
       </h1>
+
+      {/* Опциональный подзаголовок */}
       {subtitle && (
-        <p className={`text-sm tracking-[0.3em] uppercase
-          ${isDark ? "text-white/30" : "text-black/30"}`}>
-          {subtitle}
-        </p>
+        <p className='mt-4 text-gray-500 uppercase tracking-widest text-[10px]'>{subtitle}</p>
       )}
     </div>
   );

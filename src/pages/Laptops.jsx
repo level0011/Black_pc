@@ -1,12 +1,16 @@
-export default function Laptops() {
+import PageHeader from "../components/PageHeader";
+import { LaptopsProducts } from "../data/LaptopsData";
+import ProductGrid from "../components/ProductGrid";
+
+export default function Laptops({ isDark = true }) {
   return (
-    <div className='flex flex-col items-center pt-24'>
-      <h1 className='text-8xl font-black uppercase tracking-[1px]'>Ноутбуки</h1>
-      <p className='mt-4 text-gray-500 uppercase tracking-widest text-[10px]'>
-        Мощность десктопа в компактном корпусе
-      </p>
-      <div className='mt-10 p-10 border border-dashed border-gray-500 rounded-3xl opacity-30'>
-        Здесь скоро будут карточки ноутбуков...
+    <div
+      className={`min-h-screen font-sans relative overflow-x-hidden transition-colors duration-300
+      ${isDark ? "bg-[#0a0a0a]" : "bg-white"}`}
+    >
+      <PageHeader title='Ноутбуки' subtitle='Мощность десктопа в компактном корпусе' isDark={isDark} />
+      <div className='relative z-10 max-w-6xl mx-auto px-6 py-12'>
+        <ProductGrid products={LaptopsProducts} isDark={isDark} />
       </div>
     </div>
   );

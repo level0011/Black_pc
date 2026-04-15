@@ -12,8 +12,8 @@ export default function App() {
   return (
     <Layout isDark={isDark} setIsDark={setIsDark} setCurrentPage={setCurrentPage}>
       {currentPage === "home" && <Home isDark={isDark} />}
-      {currentPage === "laptops" && <Laptops />}
-      {currentPage === "parts" && <Parts />}
+      {currentPage === "laptops" && <Laptops isDark={isDark} />}
+      {currentPage === "parts" && <Parts isDark={isDark} />}
       {currentPage === "periphery" && <Periphery isDark={isDark} />}
     </Layout>
   );
