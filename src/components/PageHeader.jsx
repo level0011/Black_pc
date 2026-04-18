@@ -1,6 +1,6 @@
 export default function PageHeader({ title, subtitle, isDark }) {
   return (
-    <div className='flex flex-col items-center my-20 text-center'>
+    <div className='flex flex-col items-center py-20 text-center'>
       {/* Основной заголовок h1 */}
       <h1
         className={`text-7xl md:text-8xl font-black uppercase tracking-[5px] transition-colors duration-300 ${

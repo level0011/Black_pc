@@ -1,5 +1,5 @@
 import PageHeader from "../components/PageHeader";
-import { LaptopsProducts } from "../data/LaptopsData";
+import { ALL_PRODUCTS } from "../data/products";
 import ProductGrid from "../components/ProductGrid";
 
 export default function Laptops({ isDark = true }) {
@@ -10,7 +10,7 @@ export default function Laptops({ isDark = true }) {
     >
       <PageHeader title='Ноутбуки' subtitle='Мощность десктопа в компактном корпусе' isDark={isDark} />
       <div className='relative z-10 max-w-6xl mx-auto px-6 py-12'>
-        <ProductGrid products={LaptopsProducts} isDark={isDark} />
+        <ProductGrid products={ALL_PRODUCTS.laptops} isDark={isDark} />
       </div>
     </div>
   );

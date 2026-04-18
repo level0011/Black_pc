@@ -1,5 +1,5 @@
 import PageHeader from "../components/PageHeader";
-import { PartsProducts } from "../data/PartsData";
+import { ALL_PRODUCTS } from "../data/products";
 import ProductGrid from "../components/ProductGrid";
 
 export default function Parts({ isDark = true }) {
@@ -14,7 +14,7 @@ export default function Parts({ isDark = true }) {
       isDark={isDark} 
     />
       <div className='relative z-10 max-w-6xl mx-auto px-6 py-12'>
-        <ProductGrid products={PartsProducts} isDark={isDark} />
+        <ProductGrid products={ALL_PRODUCTS.parts} isDark={isDark} />
       </div>
     </div>
   );

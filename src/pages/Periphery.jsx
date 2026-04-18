@@ -1,5 +1,5 @@
 import PageHeader from "../components/PageHeader";
-import { PeripheryProducts } from "../data/PeripheryData";
+import { ALL_PRODUCTS } from "../data/products";
 import ProductGrid from "../components/ProductGrid";
 
 export default function Periphery({ isDark = true }) {
@@ -14,7 +14,7 @@ export default function Periphery({ isDark = true }) {
       isDark={isDark} 
     />
       <div className='relative z-10 max-w-6xl mx-auto px-6 py-12'>
-        <ProductGrid products={PeripheryProducts} isDark={isDark} />
+        <ProductGrid products={ALL_PRODUCTS.periphery} isDark={isDark} />
       </div>
     </div>
   );
